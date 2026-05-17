@@ -1,2 +1,1 @@
-# app-privacy-policy
-Privacy policy for android apps
+# HyperZeta Basic App Privacy Policy
