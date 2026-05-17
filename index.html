@@ -1,0 +1,1 @@
+no personal data collected, settings stored locally, no network usage.
