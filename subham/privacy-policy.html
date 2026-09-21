@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Subham — Privacy Policy</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+               max-width: 760px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #1a1a1a; }
+        h1 { font-size: 1.8rem; } h2 { font-size: 1.2rem; margin-top: 1.8rem; }
+        code { background: #f2f2f2; padding: 1px 5px; border-radius: 4px; }
+        .muted { color: #666; font-size: 0.9rem; }
+        table { border-collapse: collapse; width: 100%; margin: 12px 0; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; vertical-align: top; }
+        th { background: #fafafa; }
+    </style>
+</head>
+<body>
+<h1>Subham — Privacy Policy</h1>
+<p class="muted">Last updated: 21 September 2026</p>
+
+<p>
+    This Privacy Policy explains how <strong>HyperZeta</strong> ("we", "us") handles your
+    information in the <strong>Subham</strong> Android app
+    (package <code>com.hyperzeta.subham</code>, "the app"). Subham helps families plan weddings
+    and related ceremonies — rituals, tasks, budgets, vendors, and moi (gift) records. The app is
+    intended for users aged <strong>18 and older</strong>.
+</p>
+
+<h2>Summary</h2>
+<ul>
+    <li>Signing in is <strong>required</strong>, by phone OTP or Google, through Google Firebase
+        Authentication.</li>
+    <li>Everything you plan in the app — events, rituals, tasks, budget, vendors, guests, and moi
+        entries — is stored <strong>only on your device</strong>. This version has no cloud sync
+        and no server of ours holds it.</li>
+    <li>We do <strong>not</strong> sell your data.</li>
+    <li>There are <strong>no ads</strong> and no in-app purchases.</li>
+    <li>Crash reports and basic usage analytics are collected through Google Firebase so we can
+        fix faults.</li>
+    <li>You can delete your account and wipe all app data from
+        <code>Profile → Account → Delete account</code>.</li>
+</ul>
+
+<h2>Data we collect and why</h2>
+<table>
+    <tr><th>Data</th><th>Purpose</th><th>Service</th></tr>
+    <tr>
+        <td>Your phone number (phone sign-in), or your Google account email, display name and
+            profile photo URL (Google sign-in), plus an account identifier.</td>
+        <td>Create and authenticate your account, and keep you signed in.</td>
+        <td>Google Firebase Authentication</td>
+    </tr>
+    <tr>
+        <td>Crash and error reports: stack traces, device model, Android version, app version, and
+            a Crashlytics installation identifier.</td>
+        <td>Diagnose crashes and fix bugs.</td>
+        <td>Google Firebase Crashlytics</td>
+    </tr>
+    <tr>
+        <td>App usage events (screens opened, app opens), device and app information, the Android
+            advertising ID, and approximate (IP-derived) location.</td>
+        <td>Understand which parts of the app are used, and app stability and performance. Not
+            used for advertising — Subham shows no ads.</td>
+        <td>Google Firebase Analytics</td>
+    </tr>
+    <tr>
+        <td>Your planning data: profile details (name, surname, role, hometown, gothram,
+            kuladeivam, display language), events and dates, rituals, tasks, budget categories and
+            expense amounts, vendors and payment schedules, your guest and vendor contact lists,
+            moi (gift) entries, and app preferences such as the app-lock setting.</td>
+        <td>Run the planner. Never transmitted — it stays in the app's private storage on your
+            phone.</td>
+        <td>On-device (Android Room &amp; DataStore)</td>
+    </tr>
+</table>
+
+<p>
+    We hold no copy of your planning data. It never leaves your device, and we cannot see it. The
+    only information that reaches a server is your sign-in identity (held by Firebase
+    Authentication) and the crash/analytics data described above.
+</p>
+
+<h2>Information about other people</h2>
+<p>
+    Subham lets you record details of other people — guest and vendor contacts (name, phone,
+    email, city, address, notes) and moi entries (a family name, place, occasion, and the gift
+    given or received). You enter this yourself and it is stored only on your device. You are
+    responsible for having a proper basis to record another person's details, and for handling any
+    request they make about that record. Because we never receive this data, we cannot access,
+    export, or delete it for them — you can, inside the app.
+</p>
+
+<h2>Permissions</h2>
+<p>
+    The app uses <code>INTERNET</code> and <code>ACCESS_NETWORK_STATE</code> for sign-in, crash
+    reporting and analytics; <code>POST_NOTIFICATIONS</code> for task and ritual reminders (off
+    until you allow it); <code>SCHEDULE_EXACT_ALARM</code> so reminders arrive on the minute rather
+    than batched; <code>RECEIVE_BOOT_COMPLETED</code> to re-arm reminders after a restart; and
+    <code>USE_BIOMETRIC</code> for the optional app lock. The Firebase Analytics SDK also declares
+    the advertising ID permission (<code>AD_ID</code>); you can reset or delete your advertising ID
+    in <code>Android Settings → Privacy → Ads</code>.
+</p>
+<p>
+    <strong>Biometrics never reach the app.</strong> The app lock asks Android to confirm your
+    fingerprint, face or screen lock and receives only a yes/no answer. No biometric data is read,
+    stored or transmitted by Subham.
+</p>
+
+<h2>Third-party services</h2>
+<p>
+    We use Google Firebase to operate the app: <strong>Firebase Authentication</strong> (sign-in),
+    <strong>Firebase Crashlytics</strong> (crash reports) and <strong>Firebase Analytics</strong>
+    (usage and stability). Google Play services supports sign-in on the device. Google's handling
+    of this data is governed by Google's Privacy Policy:
+    <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. See also
+    <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security
+    information</a>. To verify a phone number, Firebase sends an SMS through its carrier partners
+    and may use your phone number and device information for abuse prevention.
+</p>
+
+<h2>Data sharing</h2>
+<p>
+    We do not sell your data. Your planning data is never shared with anyone. Sign-in, crash and
+    analytics data is shared only with Google as the provider of the services listed above, and is
+    encrypted in transit.
+</p>
+
+<h2>Data retention and deletion</h2>
+<p>
+    Your planning data lives only on your device, so you control it completely:
+</p>
+<ul>
+    <li><strong>Delete individual items</strong> — any event, task, expense, vendor, contact or moi
+        entry can be deleted inside the app.</li>
+    <li><strong>Delete your account</strong> — <code>Profile → Account → Delete account</code>
+        deletes your Firebase account and then wipes every table and preference on the device. This
+        is permanent and cannot be undone.</li>
+    <li><strong>Sign out</strong> — <code>Profile → Account → Sign out</code> deliberately
+        <em>keeps</em> your data on the device so you can sign back in and resume planning.</li>
+    <li><strong>Uninstall</strong> — removes all app data from the device. Note that uninstalling
+        alone does <em>not</em> delete your Firebase account; use Delete account for that, or email
+        us.</li>
+</ul>
+<p>
+    Firebase Authentication keeps your account record until the account is deleted. Crashlytics
+    retains crash reports for up to 90 days, and Analytics data is retained for up to 14 months, as
+    configured with Google. Since we hold no copy of your planning data, there is nothing for us to
+    delete on our side. For any data request, contact us at the email below and we will respond
+    within 30 days.
+</p>
+
+<h2>Security</h2>
+<p>
+    App data is kept in Android's private per-app storage, which other apps cannot read. You can
+    turn on <strong>App lock</strong> (<code>Profile → Account</code>) to require your screen lock
+    or biometric before Subham opens. No method of storage or transmission is perfectly secure, but
+    keeping your planning data off any server of ours removes most of the risk.
+</p>
+
+<h2>Your rights</h2>
+<p>
+    Depending on where you live — for example under India's Digital Personal Data Protection Act,
+    2023, the EU/UK GDPR, or the California CCPA — you may have the right to access, correct, or
+    delete data relating to you, to withdraw consent, and to object to or restrict certain
+    processing. We do not sell personal information. Your planning data is on-device and not held
+    by us; for your account identity and crash/analytics data, use Delete account in the app, or
+    contact us at the email below.
+</p>
+
+<h2>Children</h2>
+<p>
+    The app is a ceremony-planning tool intended for users aged 18 and older. It is not directed to
+    children, and we do not knowingly collect personal information from them. If you believe a
+    child has provided us information, contact us and we will delete it.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+    We may update this policy as the app changes. The "Last updated" date above reflects the
+    current version.
+</p>
+
+<h2>Contact</h2>
+<p>
+    Questions or data requests: <a href="mailto:hyperzetaz@gmail.com">hyperzetaz@gmail.com</a>.
+</p>
+</body>
+</html>
