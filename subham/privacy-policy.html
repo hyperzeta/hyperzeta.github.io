@@ -24,7 +24,7 @@
     information in the <strong>Subham</strong> Android app
     (package <code>com.hyperzeta.subham</code>, "the app"). Subham helps families plan weddings
     and related ceremonies — rituals, tasks, budgets, vendors, and moi (gift) records. The app is
-    intended for users aged <strong>18 and older</strong>.
+    intended for users aged <strong>13 and older</strong>.
 </p>
 
 <h2>Summary</h2>
@@ -35,7 +35,8 @@
         entries — is stored <strong>only on your device</strong>. This version has no cloud sync
         and no server of ours holds it.</li>
     <li>We do <strong>not</strong> sell your data.</li>
-    <li>There are <strong>no ads</strong> and no in-app purchases.</li>
+    <li>There are <strong>no ads</strong>. The app is free today; paid subscription features may
+        be added later, billed through Google Play.</li>
     <li>Crash reports and basic usage analytics are collected through Google Firebase so we can
         fix faults.</li>
     <li>You can delete your account and wipe all app data from
@@ -54,7 +55,8 @@
     <tr>
         <td>Crash and error reports: stack traces, device model, Android version, app version, and
             a Crashlytics installation identifier.</td>
-        <td>Diagnose crashes and fix bugs.</td>
+        <td>Diagnose crashes and fix bugs. We do not attach your account identifier, phone number
+            or email to crash reports.</td>
         <td>Google Firebase Crashlytics</td>
     </tr>
     <tr>
@@ -63,6 +65,21 @@
         <td>Understand which parts of the app are used, and app stability and performance. Not
             used for advertising — Subham shows no ads.</td>
         <td>Google Firebase Analytics</td>
+    </tr>
+    <tr>
+        <td>The verification SMS sent to you at sign-in, read automatically to fill in the code.</td>
+        <td>Auto-fill the 6-digit OTP so you do not have to switch apps. Uses the Google SMS
+            Retriever API: the app holds no SMS permission and receives only the single message
+            that matches its own signature. The message is read in memory, never stored or sent
+            anywhere.</td>
+        <td>Google Play services (SMS Retriever)</td>
+    </tr>
+    <tr>
+        <td>A reference (URI) to the profile photo you pick, if you set one.</td>
+        <td>Show your photo in the app. Chosen through the Android photo picker, so the app holds
+            no storage or gallery permission and sees only the one image you pick. The image is
+            never copied out of your gallery and never uploaded.</td>
+        <td>On-device (Android photo picker)</td>
     </tr>
     <tr>
         <td>Your planning data: profile details (name, surname, role, hometown, gothram,
@@ -97,7 +114,10 @@
     reporting and analytics; <code>POST_NOTIFICATIONS</code> for task and ritual reminders (off
     until you allow it); <code>SCHEDULE_EXACT_ALARM</code> so reminders arrive on the minute rather
     than batched; <code>RECEIVE_BOOT_COMPLETED</code> to re-arm reminders after a restart; and
-    <code>USE_BIOMETRIC</code> for the optional app lock. The Firebase Analytics SDK also declares
+    <code>USE_BIOMETRIC</code> for the optional app lock. The app requests <strong>no</strong>
+    storage, gallery, contacts or SMS permission: profile photos come through the Android photo
+    picker and the sign-in code through the SMS Retriever API, neither of which needs one. The
+    Firebase Analytics SDK also declares
     the advertising ID permission (<code>AD_ID</code>); you can reset or delete your advertising ID
     in <code>Android Settings → Privacy → Ads</code>.
 </p>
@@ -117,6 +137,13 @@
     <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security
     information</a>. To verify a phone number, Firebase sends an SMS through its carrier partners
     and may use your phone number and device information for abuse prevention.
+</p>
+<p>
+    <strong>Paid subscriptions.</strong> Subham is free today and contains no in-app purchases. If
+    paid features are introduced, they will be billed through <strong>Google Play Billing</strong>.
+    In that case we would receive your purchase and subscription status so the app can unlock what
+    you paid for — never your card number or bank details, which Google handles. This policy will
+    be updated before any such feature ships.
 </p>
 
 <h2>Data sharing</h2>
@@ -144,8 +171,8 @@
 </ul>
 <p>
     Firebase Authentication keeps your account record until the account is deleted. Crashlytics
-    retains crash reports for up to 90 days, and Analytics data is retained for up to 14 months, as
-    configured with Google. Since we hold no copy of your planning data, there is nothing for us to
+    retains crash reports for up to 90 days; analytics data is retained for the period set in our
+    Google Analytics configuration. Since we hold no copy of your planning data, there is nothing for us to
     delete on our side. For any data request, contact us at the email below and we will respond
     within 30 days.
 </p>
@@ -168,11 +195,18 @@
     contact us at the email below.
 </p>
 
-<h2>Children</h2>
+<h2>Children and teenagers</h2>
 <p>
-    The app is a ceremony-planning tool intended for users aged 18 and older. It is not directed to
-    children, and we do not knowingly collect personal information from them. If you believe a
-    child has provided us information, contact us and we will delete it.
+    The app is intended for users aged <strong>13 and older</strong>. It is not directed to
+    children under 13, and we do not knowingly collect personal information from them. If you
+    believe a child under 13 has provided us information, contact us and we will delete it and the
+    associated account.
+</p>
+<p>
+    If you are between 13 and the age of majority where you live, please use Subham with a parent
+    or guardian's involvement — they should review this policy with you, and their consent is
+    required for any paid subscription. Where local law sets a higher minimum age for consenting to
+    data processing (for example 16 in parts of the EU), that age applies instead of 13.
 </p>
 
 <h2>Changes to this policy</h2>
