@@ -17,7 +17,7 @@
 </head>
 <body>
 <h1>Subham — Privacy Policy</h1>
-<p class="muted">Last updated: 21 September 2026</p>
+<p class="muted">Last updated: 1 October 2026</p>
 
 <p>
     This Privacy Policy explains how <strong>HyperZeta</strong> ("we", "us") handles your
@@ -32,8 +32,11 @@
     <li>Signing in is <strong>required</strong>, by phone OTP or Google, through Google Firebase
         Authentication.</li>
     <li>Everything you plan in the app — events, rituals, tasks, budget, vendors, guests, and moi
-        entries — is stored <strong>only on your device</strong>. This version has no cloud sync
-        and no server of ours holds it.</li>
+        entries — is stored <strong>on your device</strong>. No server of ours holds it, and there
+        is no cloud sync.</li>
+    <li><strong>Optional Google Drive backup:</strong> if you turn it on, the app saves a copy of
+        your planning data to a hidden app folder in <strong>your own</strong> Google Drive. It is
+        off until you turn it on, and we cannot see it.</li>
     <li>We do <strong>not</strong> sell your data.</li>
     <li>There are <strong>no ads</strong>. The app is free today; paid subscription features may
         be added later, billed through Google Play.</li>
@@ -90,13 +93,45 @@
             phone.</td>
         <td>On-device (Android Room &amp; DataStore)</td>
     </tr>
+    <tr>
+        <td>A copy of the planning data above (except app preferences such as the app-lock
+            setting), only if you turn on <em>Back up to Google Drive</em>. Your profile photo
+            itself is not included, only its on-device reference.</td>
+        <td>Let you restore your plans on a new or reset phone. Stored in the hidden
+            <code>appDataFolder</code> of your own Google Drive, which only Subham can read. We
+            never receive it.</td>
+        <td>Google Drive (your account), via the <code>drive.appdata</code> permission</td>
+    </tr>
 </table>
 
 <p>
-    We hold no copy of your planning data. It never leaves your device, and we cannot see it. The
-    only information that reaches a server is your sign-in identity (held by Firebase
-    Authentication) and the crash/analytics data described above.
+    We hold no copy of your planning data and we cannot see it. The only information that reaches
+    a server of a service we use is your sign-in identity (held by Firebase Authentication), the
+    crash/analytics data described above, and — only if you turn it on — the Drive backup, which
+    goes to your own Google account, not to us.
 </p>
+
+<h2>Google Drive backup</h2>
+<p>
+    Drive backup is <strong>off by default</strong>. Turning it on in
+    <code>Profile → Account</code> asks Google for permission to use Subham's hidden app folder in
+    your Drive (the <code>drive.appdata</code> scope). That permission is limited to files Subham
+    itself creates: the app cannot see, read or change any other file in your Drive. It is
+    separate from how you sign in, so a phone-number account can use it too.
+</p>
+<ul>
+    <li>Backups run on the schedule you choose (daily, weekly, monthly or only when you tap
+        <em>Back up now</em>), optionally on Wi-Fi only. The app keeps the <strong>7 most
+        recent</strong> backup files and deletes older ones.</li>
+    <li><em>Restore from backup</em> replaces the planning data on the phone with the chosen
+        backup.</li>
+    <li>Backup files count toward your Google storage and are governed by Google's terms and
+        privacy policy, as is everything else in your Drive.</li>
+    <li>Turning backup off stops new backups; it does not delete existing ones. To delete them, open
+        Google Drive on the web → Settings → <em>Manage apps</em> → Subham →
+        <em>Delete hidden app data</em>. You can also remove Subham's access from your
+        <a href="https://myaccount.google.com/connections">Google Account connections</a>.</li>
+</ul>
 
 <h2>Information about other people</h2>
 <p>
@@ -131,7 +166,9 @@
 <p>
     We use Google Firebase to operate the app: <strong>Firebase Authentication</strong> (sign-in),
     <strong>Firebase Crashlytics</strong> (crash reports) and <strong>Firebase Analytics</strong>
-    (usage and stability). Google Play services supports sign-in on the device. Google's handling
+    (usage and stability). If you turn on backup, <strong>Google Drive</strong> stores the backup
+    in your own account. Google Play services supports sign-in and Drive authorization on the
+    device. Google's handling
     of this data is governed by Google's Privacy Policy:
     <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>. See also
     <a href="https://firebase.google.com/support/privacy">Firebase's privacy and security
@@ -148,21 +185,24 @@
 
 <h2>Data sharing</h2>
 <p>
-    We do not sell your data. Your planning data is never shared with anyone. Sign-in, crash and
-    analytics data is shared only with Google as the provider of the services listed above, and is
-    encrypted in transit.
+    We do not sell your data. Your planning data is never shared with anyone; if you turn on Drive
+    backup it is stored in your own Google Drive, which is not sharing it with us. Sign-in, crash
+    and analytics data is shared only with Google as the provider of the services listed above.
+    Everything sent over the network, including backups, is encrypted in transit.
 </p>
 
 <h2>Data retention and deletion</h2>
 <p>
-    Your planning data lives only on your device, so you control it completely:
+    Your planning data lives on your device, and in your own Google Drive if you turned on backup,
+    so you control it completely:
 </p>
 <ul>
     <li><strong>Delete individual items</strong> — any event, task, expense, vendor, contact or moi
         entry can be deleted inside the app.</li>
     <li><strong>Delete your account</strong> — <code>Profile → Account → Delete account</code>
         deletes your Firebase account and then wipes every table and preference on the device. This
-        is permanent and cannot be undone.</li>
+        is permanent and cannot be undone. It does <em>not</em> delete Drive backups, which live in
+        your Google account — delete those as described under Google Drive backup.</li>
     <li><strong>Sign out</strong> — <code>Profile → Account → Sign out</code> deliberately
         <em>keeps</em> your data on the device so you can sign back in and resume planning.</li>
     <li><strong>Uninstall</strong> — removes all app data from the device. Note that uninstalling
@@ -172,8 +212,9 @@
 <p>
     Firebase Authentication keeps your account record until the account is deleted. Crashlytics
     retains crash reports for up to 90 days; analytics data is retained for the period set in our
-    Google Analytics configuration. Since we hold no copy of your planning data, there is nothing for us to
-    delete on our side. For any data request, contact us at the email below and we will respond
+    Google Analytics configuration. Drive backups stay in your Google Drive until you delete them (the app
+    itself keeps only the 7 most recent). Since we hold no copy of your planning data, there is
+    nothing for us to delete on our side. For any data request, contact us at the email below and we will respond
     within 30 days.
 </p>
 
@@ -181,8 +222,9 @@
 <p>
     App data is kept in Android's private per-app storage, which other apps cannot read. You can
     turn on <strong>App lock</strong> (<code>Profile → Account</code>) to require your screen lock
-    or biometric before Subham opens. No method of storage or transmission is perfectly secure, but
-    keeping your planning data off any server of ours removes most of the risk.
+    or biometric before Subham opens. Drive backups are protected by your Google account's own
+    security, so keep that account secure. No method of storage or transmission is perfectly
+    secure, but keeping your planning data off any server of ours removes most of the risk.
 </p>
 
 <h2>Your rights</h2>
@@ -190,8 +232,8 @@
     Depending on where you live — for example under India's Digital Personal Data Protection Act,
     2023, the EU/UK GDPR, or the California CCPA — you may have the right to access, correct, or
     delete data relating to you, to withdraw consent, and to object to or restrict certain
-    processing. We do not sell personal information. Your planning data is on-device and not held
-    by us; for your account identity and crash/analytics data, use Delete account in the app, or
+    processing. We do not sell personal information. Your planning data is on your device (and, if you
+    chose, in your own Google Drive) and not held by us; for your account identity and crash/analytics data, use Delete account in the app, or
     contact us at the email below.
 </p>
 
